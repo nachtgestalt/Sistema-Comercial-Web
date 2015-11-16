@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package LoginMVC.modelo;
 
 import java.sql.ResultSet;
@@ -22,26 +17,25 @@ public class Consultas extends Conexion{
     {
         Statement st = con.createStatement();
         ResultSet rs = null;
-        String Consulta = "Select * from Usuarios";
+        String Consulta = "Select * from Cliente";
         rs = st.executeQuery(Consulta);
         
-        while(rs.next()) {
-            if(user.equals(rs.getString("Usuario")) && pass.equals(rs.getString("Contrasena")))
+            while(rs.next()) {
+                if(user.equals(rs.getString("correo")) && pass.equals(rs.getString("contraseña")))
+                    return true;
+            }
+            return false;
+    }
+    
+    public boolean Registro(String nombre, String correo, String pass, String direccion, String pais, String ciudad) throws SQLException{
+        Statement st = con.createStatement();
+        String Consulta = "Insert into Cliente (`Nombre`,`correo`,`contraseña`,`Direccion`,`Pais`,`Ciudad`) Values ('"+nombre+"','"+correo+"','"+pass+"','"+direccion+"','"+pais+"','"+ciudad+"')";
+            try {
+                st.executeUpdate(Consulta);
                 return true;
-        }
-  
-        return false;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
     }
-    
-    public static void main(String[] args) {
-        try {
-            Consultas con = new Consultas();
-            System.out.println(con.Autenticacion("hackro","456"));
-        } catch (SQLException ex) {
-            Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-   
-    
-    
 }

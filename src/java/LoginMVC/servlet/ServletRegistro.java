@@ -9,6 +9,7 @@ import LoginMVC.modelo.Conexion;
 import LoginMVC.modelo.Consultas;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +23,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author angel
  */
-public class Validacion extends HttpServlet {
+public class ServletRegistro extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,32 +37,28 @@ public class Validacion extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-        
-        HttpSession sesion = request.getSession();
-        String user = request.getParameter("user");
-        String pass = request.getParameter("pass");
-        //sesion.setAttribute("isLogin", "true");
-        //sesion.setAttribute("username", user);
-        Consultas con = new Consultas();
-        
-        /*if(sesion.isNew()){
-            if (con.Autenticacion(user, pass)){
-                sesion.setAttribute("usuario", user);
-                response.sendRedirect("loginExito.jsp");
-            }
-        }*/
-        
-        /*if(sesion.getAttribute("username").equals("")) {
-            response.sendRedirect("error.jsp");
-        }
-        else*/
-            if (con.Autenticacion(user, pass)){
-                sesion.setAttribute("username", user);
-                response.sendRedirect("index.jsp");
-            }
-            else
-                response.sendRedirect("login.jsp");
+         HttpSession respuesta = request.getSession(true);
+         String nombre = request.getParameter("Nombre");
+         String correo = request.getParameter("e-mail");
+         String pass = request.getParameter("pass");
+         String direccion = request.getParameter("direccion");
+         String pais = request.getParameter("country");
+         String ciudad = request.getParameter("ciudad");
+         Consultas con = new Consultas();
+         if(nombre.isEmpty() || correo.isEmpty() || pass.isEmpty() || direccion.isEmpty() || pais.isEmpty() || ciudad.isEmpty()) {
+             respuesta.setAttribute("error", "Hay campos vacios");
+             response.sendRedirect("error.jsp");
+         }
+         else{
+             if(con.Registro(nombre,correo,pass,direccion,pais,ciudad)){
+                 response.sendRedirect("login.jsp");
+             }
+             else
+                 response.sendRedirect("error.jsp");
+         }
     }
+  
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -78,7 +75,7 @@ public class Validacion extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Validacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletRegistro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -96,7 +93,7 @@ public class Validacion extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Validacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletRegistro.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

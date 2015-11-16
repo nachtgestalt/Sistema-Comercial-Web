@@ -8,7 +8,9 @@ package LoginMVC.modelo;
 import java.sql.DriverManager;
 import java.sql.DriverManager;
 import com.mysql.jdbc.Connection;
+import static java.lang.System.out;
 import java.sql.SQLException;
+import java.sql.*;
 
 /**
  *
@@ -24,19 +26,18 @@ public class Conexion
     public static final String DATABASE = "Administracion Web";
     public static final String CLASSNAME = "com.mysql.jdbc.Driver";
     public static final String URL = "jdbc:mysql://"+ HOST +":"+PORT+"/"+DATABASE;
+    public java.sql.Connection con;
+    public static String query;
+    ResultSet setResult;
+    PreparedStatement stmt;
     
-     public java.sql.Connection con;
-     
        public Conexion() {
-  
-        try {
-           Class.forName(CLASSNAME);
-            con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        } catch (ClassNotFoundException e) {
-            System.out.println("Error");
-        } catch (SQLException e) {
-            System.out.println("Error");
-        }
-}
+           try {
+               Class.forName(CLASSNAME);
+               con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+           } catch (Exception e) {
+               out.print("Error al conectar");
+           }
+       }
        
 }

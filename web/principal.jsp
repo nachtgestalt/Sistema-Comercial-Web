@@ -59,22 +59,12 @@
   <div class="header-top">
 	 <div class="wrap"> 
 		<div class="logo">
-			<a href="index.jsp"><img src="imagenes/mistertennis.png" alt=""/></a>
+			<a href="index.html"><img src="imagenes/mistertennis.png" alt=""/></a>
 	    </div>
 	    <div class="cssmenu">
 		   <ul>
-                         <%
-                             if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
-                         %>
-                         <li><a href="login.jsp">Mi cuenta</a></li> 
-			 <li><a href="checkout.jsp">Checkout</a></li>
-                         <%} else { %>
-                            <li><a href="login.jsp">Mi cuenta</a></li> 
-                            <li><a href="checkout.jsp">Checkout</a></li>
-                            <li><a href="logout.jsp" >Cerrar sesion</a></li> 
-                        <% 
-                            }
-                        %>
+			 <li><a href="login.jsp">Mi cuenta</a></li> 
+			 <li><a href="checkout.html">Checkout</a></li> 
 		   </ul>
 		</div>
 		<ul class="icon2 sub-icon2 profile_img">
@@ -92,7 +82,7 @@
    	  <div class="wrap">
    		<!-- start header menu -->
 		 <ul class="megamenu skyblue">
-                     <li><a class="color1" href="index.jsp">Inicio</a></li>
+		    <li><a class="color1" href="#">Inicio</a></li>
 			<li class="grid"><a class="color2" href="#">Hombre</a>
 				<div class="megapanel">
 					<div class="row">
@@ -310,7 +300,7 @@
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating">
@@ -330,7 +320,7 @@
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -352,7 +342,7 @@
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating">
@@ -372,7 +362,7 @@
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -394,7 +384,7 @@
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating">
@@ -414,7 +404,7 @@
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -439,7 +429,7 @@
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating">
@@ -459,7 +449,7 @@
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -481,7 +471,7 @@
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating">
@@ -501,7 +491,7 @@
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -523,7 +513,7 @@
 	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating">
@@ -543,7 +533,7 @@
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>

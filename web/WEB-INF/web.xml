@@ -4,6 +4,11 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+    <filter>
+        <description>Filtroparalogin</description>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>LoginMVC.modelo.LoginFilter</filter-class>
+    </filter>
     <servlet>
         <servlet-name>Validacion</servlet-name>
         <servlet-class>LoginMVC.servlet.Validacion</servlet-class>
@@ -13,6 +18,22 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>ServletRegistro</servlet-name>
+        <servlet-class>LoginMVC.servlet.ServletRegistro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>LoginMVC.servlet.logout</servlet-class>
+    </servlet>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/Deportes3000/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>ManagedBean</servlet-name>
+        <servlet-class>LoginMVC.servlet.ManagedBean</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validacion</servlet-name>
         <url-pattern>/Autenticacion</url-pattern>
@@ -21,9 +42,21 @@
         <servlet-name>Principal</servlet-name>
         <url-pattern>/principal/*</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletRegistro</servlet-name>
+        <url-pattern>/Registro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManagedBean</servlet-name>
+        <url-pattern>/ManagedBean</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            2
         </session-timeout>
     </session-config>
 </web-app>
