@@ -1182,6 +1182,55 @@ h5.sub_title{
 .comments-area input[type="submit"]:hover{
 	background:#444;
 }
+.comments-area2 input[type="text"] {
+	padding: 10px 15px;
+	width: 10%;
+	color:#000;
+	font-size: 0.8125em;
+	border:1px solid #f0f0f0;
+	background:#fff;
+	outline: none;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+}
+.comments-area2 input[type="text"]:hover, .comments-area input[type="password"]:hover{
+	border:1px solid #DBDADA;
+}
+.comments-area2 input[type="submit"] {
+	background: #555;
+	color: #FFF;
+	/* font-size: 0.8em; */
+	padding: 8px 20px;
+	/* border-radius: 5px; */
+	border-bottom: 4px solid #1D1C1C;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	float: right;
+}
+.comments-area2 input[type="submit"]:hover{
+	background:#444;
+}
+.comments-area2 input[type="number"] {
+	padding: 10px 15px;
+	width: 10%;
+	color:#000;
+	font-size: 0.8125em;
+	border:1px solid #f0f0f0;
+	background:#fff;
+	outline: none;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+}
 p#login-form-remember{
 	float:left;
 }

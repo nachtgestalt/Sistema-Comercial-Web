@@ -1,8 +1,3 @@
-<%-- 
-    Document   : checkout
-    Created on : 15/11/2015, 06:21:28 PM
-    Author     : angel
---%>
 <%
     if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
         response.sendRedirect("login.jsp"); 
@@ -10,6 +5,8 @@
 %>      
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="LoginMVC.modelo.*"%>
+<%@page import="java.util.*"%>
 <!DOCTYPE html>
 <!--A Design by W3layouts
 Author: W3layout
@@ -20,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Adidas Website Template | Checkout :: w3layouts</title>
+<title>Deportes 3000 - Checkout</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -111,22 +108,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    	  <div class="wrap">
    		<!-- start header menu -->
 		 <ul class="megamenu skyblue">
-		    <li><a class="color1" href="index.jsp">Inicio</a></li>
+                     <li><a class="color1" href="index.jsp">Inicio</a></li>
 			<li class="grid"><a class="color2" href="#">Hombre</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
-								<h4>popular</h4>
+								<h4>Calzado</h4>
 								<ul>
-									<li><a href="shop.html">new arrivals</a></li>
-									<li><a href="shop.html">men</a></li>
-									<li><a href="shop.html">women</a></li>
-									<li><a href="shop.html">accessories</a></li>
-									<li><a href="shop.html">kids</a></li>
-									<li><a href="shop.html">login</a></li>
-								</ul>	
-							</div>
+									<li><a href="tienda.jsp">Moda</a></li>
+									<li><a href="tienda.jsp">Futbol</a></li>
+									<li><a href="tienda.jsp">Basquetbol</a></li>
+									<li><a href="tienda.jsp">Entrenamiento</a></li>
+									<li><a href="tienda.jsp">Correr</a></li>
+									<li><a href="tienda.jsp">Sandalias</a></li>
+								</ul>
+                                                                <h4>Ropa</h4>
+                                                                <ul>
+									<li><a href="tienda.jsp">Jerseys</a></li>
+									<li><a href="tienda.jsp">Playeras</a></li>
+									<li><a href="tienda.jsp">Chamarras</a></li>
+									<li><a href="tienda.jsp">Shorts</a></li>
+									<li><a href="tienda.jsp">Pants</a></li>
+								</ul>
+                                                                <h4>Accesorios</h4>
+                                                                <ul>
+									<li><a href="tienda.jsp">Gorras</a></li>
+									<li><a href="tienda.jsp">Relojes</a></li>
+									<li><a href="tienda.jsp">Lentes</a></li>
+									<li><a href="tienda.jsp">Mochilas</a></li>
+								</ul>
+                                                        </div>
 						</div>
 						<div class="col1"></div>
 						<div class="col1"></div>
@@ -141,29 +153,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
-								<h4>popular</h4>
+								<h4>Calzado</h4>
 								<ul>
-									<li><a href="shop.html">new arrivals</a></li>
-									<li><a href="shop.html">men</a></li>
-									<li><a href="shop.html">women</a></li>
-									<li><a href="shop.html">accessories</a></li>
-									<li><a href="shop.html">kids</a></li>
-									<li><a href="shop.html">style videos</a></li>
-								</ul>	
-							</div>
+									<li><a href="tienda.jsp">Moda</a></li>
+									<li><a href="tienda.jsp">Futbol</a></li>
+									<li><a href="tienda.jsp">Basquetbol</a></li>
+									<li><a href="tienda.jsp">Entrenamiento</a></li>
+									<li><a href="tienda.jsp">Correr</a></li>
+									<li><a href="tienda.jsp">Sandalias</a></li>
+								</ul>
+                                                                <h4>Ropa</h4>
+                                                                <ul>
+									<li><a href="tienda.jsp">Jerseys</a></li>
+									<li><a href="tienda.jsp">Playeras</a></li>
+									<li><a href="tienda.jsp">Chamarras</a></li>
+									<li><a href="tienda.jsp">Shorts</a></li>
+									<li><a href="tienda.jsp">Pants</a></li>
+								</ul>
+                                                                <h4>Accesorios</h4>
+                                                                <ul>
+									<li><a href="tienda.jsp">Gorras</a></li>
+									<li><a href="tienda.jsp">Relojes</a></li>
+									<li><a href="tienda.jsp">Lentes</a></li>
+									<li><a href="tienda.jsp">Mochilas</a></li>
+								</ul>
+                                                        </div>
 						</div>
 						<div class="col1">
-						 <div class="h_nav">
-						   <img src="imagenes/nav_img1.jpg" alt=""/>
-						 </div>
+                                                    <div class="h_nav">
+                                                        <img src="imagenes/nav_img1.jpg" alt=""/>
+                                                    </div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
 					</div>
 					</div>
     			</li>				
@@ -172,16 +192,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
-								<h4>popular</h4>
+								<h4>Calzado</h4>
 								<ul>
-									<li><a href="shop.html">new arrivals</a></li>
-									<li><a href="shop.html">men</a></li>
-									<li><a href="shop.html">women</a></li>
-									<li><a href="shop.html">accessories</a></li>
-									<li><a href="shop.html">kids</a></li>
-									<li><a href="shop.html">login</a></li>
-								</ul>	
-							</div>
+									<li><a href="tienda.jsp">Moda</a></li>
+									<li><a href="tienda.jsp">Futbol</a></li>
+									<li><a href="tienda.jsp">Basquetbol</a></li>
+									<li><a href="tienda.jsp">Entrenamiento</a></li>
+									<li><a href="tienda.jsp">Correr</a></li>
+									<li><a href="tienda.jsp">Sandalias</a></li>
+								</ul>
+                                                                <h4>Ropa</h4>
+                                                                <ul>
+									<li><a href="tienda.jsp">Jerseys</a></li>
+									<li><a href="tienda.jsp">Playeras</a></li>
+									<li><a href="tienda.jsp">Chamarras</a></li>
+									<li><a href="tienda.jsp">Shorts</a></li>
+									<li><a href="tienda.jsp">Pants</a></li>
+								</ul>
+                                                                <h4>Accesorios</h4>
+                                                                <ul>
+									<li><a href="tienda.jsp">Gorras</a></li>
+									<li><a href="tienda.jsp">Relojes</a></li>
+									<li><a href="tienda.jsp">Lentes</a></li>
+									<li><a href="tienda.jsp">Mochilas</a></li>
+								</ul>
+                                                        </div>
 						</div>
 						<div class="col1"></div>
 						<div class="col1"></div>
@@ -191,43 +226,71 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 				</li>
-				<li><a class="color9" href="#">Futbol</a>
+				<li><a class="color9" href="#">Deportes</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
-								<h4>popular</h4>
-								<ul>
-									<li><a href="shop.html">new arrivals</a></li>
-									<li><a href="shop.html">men</a></li>
-									<li><a href="shop.html">women</a></li>
-									<li><a href="shop.html">accessories</a></li>
-									<li><a href="shop.html">kids</a></li>
-									<li><a href="shop.html">style videos</a></li>
-								</ul>	
+                                                            <ul>
+                                                                <li><a href="tienda.jsp">Futbol</a></li>
+                                                                <li><a href="tienda.jsp">Basquetbol</a></li>
+                                                                <li><a href="tienda.jsp">Correr</a></li>
+                                                                <li><a href="tienda.jsp">Entrenamiento</a></h4>
+							    </ul>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col2"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-						<div class="col1"></div>
-					</div>
     				</div>
-				</li>
-				<li><a class="color10" href="#">Correr</a></li>
 		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div>
 		   <div class="clear"></div>
      	</div>
        </div>
        <div class="login">
          <div class="wrap">
-    	     <h4 class="title">Shopping cart is empty</h4>
-    	     <p class="cart">You have no items in your shopping cart.<br>Click<a href="index.html"> here</a> to continue shopping</p>
+    	     <h4 class="title">Carrito de compras</h4>
+             <form name="form1" action="ConsultaProducto">
+                <table border="1" align="center" width="700">
+                    <tr>
+                        <th colspan="5">Productos</th>
+                    </tr>
+                    <tr>
+                        <th>Nombre</th><th>Marca</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th>
+                    </tr>
+                    <%
+                       double total = 0;
+                       ArrayList<BeanDetalleVenta> lista = (ArrayList<BeanDetalleVenta>)session.getAttribute("carrito");
+                       if(lista!=null){
+                           for(BeanDetalleVenta d:lista){                               
+                               %>
+                               <tr>
+                                   <td><%=d.getBprod()%></td>
+                                   <td><%=d.getBprod().getMarca()%></td>
+                                   <td align="right"><%=d.getBprod().getPrecio()%></td>
+                                   <td align="right"><input type="number" name="cantidad" value="<%=d.getCantidad()%>" min="0"></td>
+                                   <td align="right"><%=d.getBprod().getPrecio() * d.getCantidad()%></td>
+                               </tr>
+                               <%
+                               total = total + d.getBprod().getPrecio()*d.getCantidad();
+                           }
+                       }
+                    %>
+                    <tr>
+                        <th colspan="4" align="right">Total: </th>
+                        <th align="right"><%=total%></th>
+                    </tr>
+                </table>
+                    <div class="button1">
+                        <input type="submit" value="Procesar pedido"></a>
+                    </div>
+                    <input type="hidden" name="accion" value="RegistrarPedido">
+             </form>
+                    
     	   </div>
 		</div>
+                    <h3 align="center"><a href="index.jsp">Seguir comprando</a></h3>
         <div class="footer">
        	  <div class="footer-top">
        		<div class="wrap">
@@ -250,28 +313,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col_1_of_5 span_1_of_5">
 					<h3 class="m_9">Informacion</h3>
 					<ul class="list1">
-			            <li><a href="shop.html">Training Clothing</a></li>
-			            <li><a href="shop.html">Training Accessories</a></li>
-			            <li><a href="shop.html">miCoach</a></li>
-			            <li><a href="shop.html">All Sports</a></li>
-			         </ul>
+                                            <li><a href="tienda.jsp">Acerca de nosotros</a></li>
+                                            <li><a href="tienda.jsp">Informacion de envios</a></li>
+                                            <li><a href="tienda.jsp">Aviso de privacidad</a></li>
+                                            <li><a href="tienda.jsp">Terminos y condiciones</a></li>
+                                            <li><a href="tienda.jsp">Formas de pago</a></li>
+                                            <li><a href="tienda.jsp">Como comprar</a></li>
+                                        </ul>
 				</div>
 				<div class="col_1_of_5 span_1_of_5">
 					<h3 class="m_9">Servicio al cliente</h3>
 					<ul class="list1">
-			            <li><a href="shop.html">Men's Originals</a></li>
-			            <li><a href="shop.html">Women's Originals</a></li>
-			            <li><a href="shop.html">Kid's Originals</a></li>
-			            <li><a href="shop.html">All Originals</a></li>
+			            <li><a href="tienda.jsp">Contacto</a></li>
+			            <li><a href="tienda.jsp">Devoluciones</a></li>
 		            </ul>
 				</div>
 				<div class="col_1_of_5 span_1_of_5">
 					<h3 class="m_9">Mi cuenta</h3>
 					<ul class="list1">
-					    <li><a href="shop.html">Sports Bras</a></li>
-					    <li><a href="shop.html">Scarves</a></li>
-					    <li><a href="shop.html">Shinguards</a></li>
-					    <li><a href="shop.html">Underwear</a></li>
+					    <li><a href="tienda.jsp">Historial de pedidos</a></li>
+					    <li><a href="tienda.jsp">Lista de deseos</a></li>
+					    <li><a href="tienda.jsp">Boletin de noticias</a></li>
 		            </ul>
 				</div>
 				<div class="clear"></div>

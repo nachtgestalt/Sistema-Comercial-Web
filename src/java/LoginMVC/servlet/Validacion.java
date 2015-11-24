@@ -44,17 +44,6 @@ public class Validacion extends HttpServlet {
         //sesion.setAttribute("username", user);
         Consultas con = new Consultas();
         
-        /*if(sesion.isNew()){
-            if (con.Autenticacion(user, pass)){
-                sesion.setAttribute("usuario", user);
-                response.sendRedirect("loginExito.jsp");
-            }
-        }*/
-        
-        /*if(sesion.getAttribute("username").equals("")) {
-            response.sendRedirect("error.jsp");
-        }
-        else*/
             if (con.Autenticacion(user, pass)){
                 sesion.setAttribute("username", user);
                 response.sendRedirect("index.jsp");

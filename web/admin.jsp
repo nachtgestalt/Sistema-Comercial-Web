@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
 	<script src="js/hideshow.js" type="text/javascript"></script>
 	<script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
@@ -59,7 +61,7 @@
 
 <body>
 
-	<header id="header">
+	<header id="header-top">
 		<hgroup>
 			<h1 class="site_title"><a href="index.html">Website Admin</a></h1>
 			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="http://www.medialoot.com">View Site</a></div>

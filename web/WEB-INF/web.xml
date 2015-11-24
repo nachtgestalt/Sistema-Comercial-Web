@@ -34,6 +34,10 @@
         <servlet-name>ManagedBean</servlet-name>
         <servlet-class>LoginMVC.servlet.ManagedBean</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultaProducto</servlet-name>
+        <servlet-class>LoginMVC.servlet.ConsultaProducto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validacion</servlet-name>
         <url-pattern>/Autenticacion</url-pattern>
@@ -53,6 +57,10 @@
     <servlet-mapping>
         <servlet-name>ManagedBean</servlet-name>
         <url-pattern>/ManagedBean</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaProducto</servlet-name>
+        <url-pattern>/ConsultaProducto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,15 +1,21 @@
+<%-- 
+    Document   : tienda
+    Created on : 15/11/2015, 08:50:18 PM
+    Author     : angel
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="LoginMVC.modelo.BeanProducto"%>
-<%@page import="java.util.ArrayList,LoginMVC.modelo.*" %>    
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Deportes 3000</title>
+<title>Free Adidas Website Template | Shop :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
 <script type="text/javascript">
         $(document).ready(function() {
             $(".dropdown img.flag").addClass("flagvisibility");
@@ -46,6 +52,13 @@
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
 <!-- top scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -56,17 +69,17 @@
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
-	</script>
+	</script>		
 </head>
 <body>
-    <div class="header-top">
+  <div class="header-top">
 	 <div class="wrap"> 
 		<div class="logo">
 			<a href="index.jsp"><img src="imagenes/mistertennis.png" alt=""/></a>
 	    </div>
 	    <div class="cssmenu">
 		   <ul>
-                         <%
+			 <%
                              if ((session.getAttribute("username") == null) || (session.getAttribute("username") == "")) {
                          %>
                          <li><a href="login.jsp">Mi cuenta</a></li> 
@@ -84,6 +97,7 @@
 			<li><a class="active-icon c2" href="#"> </a>
 				<ul class="sub-icon2 list">
 					<li><h3>Products</h3><a href=""></a></li>
+					<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
 				</ul>
 			</li>
 		</ul>
@@ -234,201 +248,118 @@
 		   <div class="clear"></div>
      	</div>
        </div>
-       <div class="index-banner">
-       	  <div class="wmuSlider example1" style="height: 560px;">
-			  <div class="wmuSliderWrapper">
-				  <article style="position: relative; width: 100%; opacity: 1;"> 
-				   	<div class="banner-wrap">
-					   	<div class="slider-left">
-							<img src="imagenes/banner1.jpg" alt=""/> 
+       <div class="login">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+		        <section  class="sky-form">
+					<h4>Marca</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Adidas</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Converse</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Puma</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Nike</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Charlie</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Vans</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Pirma Brasil</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Reebok</label>
+							</div>
 						</div>
-						 <div class="slider-right">
-						    <h1>Classic</h1>
-						    <h2>White</h2>
-						    <p>Tenis chidos</p>
-						    <div class="btn"><a href="tienda.jsp">Comprar</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>
-					</article>
-				   <article style="position: absolute; width: 100%; opacity: 0;"> 
-				   	 <div class="banner-wrap">
-					   	<div class="slider-left">
-							<img src="imagenes/banner2.jpg" alt=""/> 
+		       </section>
+		       <section  class="sky-form">
+					<h4>Talla</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Menos de 5</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>5-6</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>6-7</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Mas de 7</label>
+							</div>
 						</div>
-						 <div class="slider-right">
-						    <h1>Classic</h1>
-						    <h2>White</h2>
-						    <p>Tenis chidos</p>
-						    <div class="btn"><a href="tienda.jsp">Comprar</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>
-				   </article>
-				   <article style="position: absolute; width: 100%; opacity: 0;">
-				   	<div class="banner-wrap">
-					   	<div class="slider-left">
-							<img src="imagenes/banner1.jpg" alt=""/> 
+		       </section>
+		       <section  class="sky-form">
+					<h4>Precio</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>$500.00 - $1000.00</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$1000.00 - $1500.00</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$1500.00 - $2000.00</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Mas de $2000 </label>
+							</div>
 						</div>
-						 <div class="slider-right">
-						    <h1>Classic</h1>
-						    <h2>White</h2>
-						    <p>Tenis chidos</p>
-						    <div class="btn"><a href="tienda.jsp">Comprar</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>
-				   </article>
-				   <article style="position: absolute; width: 100%; opacity: 0;">
-				   	<div class="banner-wrap">
-					   	<div class="slider-left">
-							<img src="imagenes/banner2.jpg" alt=""/> 
+		       </section>
+		       <section  class="sky-form">
+					<h4>Color</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Red</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Verde</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Negro</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Amarillo</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Azul</label>
+							</div>
 						</div>
-						 <div class="slider-right">
-						    <h1>Classic</h1>
-						    <h2>White</h2>
-						    <p>Tenis chidos</p>
-						    <div class="btn"><a href="tienda.jsp">Comprar</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>
-				   </article>
-				   <article style="position: absolute; width: 100%; opacity: 0;"> 
-				   	 <div class="banner-wrap">
-					   	<div class="slider-left">
-							<img src="imagenes/banner1.jpg" alt=""/> 
-						</div>
-						 <div class="slider-right">
-						    <h1>Classic</h1>
-						    <h2>White</h2>
-						    <p>Tenis chidos</p>
-						    <div class="btn"><a href="tienda.jsp">Comprar</a></div>
-						 </div>
-						 <div class="clear"></div>
-					 </div>
-			      </article>
-				</div>
-                <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
-                <ul class="wmuSliderPagination">
-                	<li><a href="#" class="">0</a></li>
-                	<li><a href="#" class="">1</a></li>
-                	<li><a href="#" class="wmuActive">2</a></li>
-                	<li><a href="#">3</a></li>
-                	<li><a href="#">4</a></li>
-                  </ul>
-                 <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="wmuActive">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li></ul></div>
-            	 <script src="js/jquery.wmuSlider.js"></script> 
-				 <script type="text/javascript" src="js/modernizr.custom.min.js"></script> 
-						<script>
-       						 $('.example1').wmuSlider();         
-   						</script> 	           	      
-             </div>
-             <div class="main">
-                <div class="wrap">
-				  <div class="content-bottom">
-				   <div class="box1">
-				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
-				     <div class="view view-fifth">
-                                         <div class="top_box">
-                                             <%
-                                                ArrayList<BeanProducto> lista = Consultas.consultarProducto();
-                                                BeanProducto beanP = lista.get(0);
-                                             %>   
-                                             <h3 class="m_1"><%=beanP.getNombre()%></h3>
-                                             <p class="m_2">Marca:<%=beanP.getMarca()%></p>
-                                             <div class="grid_img">
-                                                 <div class="css3"><img src="imagenes/pic.jpg" alt=""/></div>
-                                                 <div class="mask">
-                                                     <div class="info">Vista Rapida</div>
-                                                 </div>
-                                            </div>    
-                                             <div class="price">$<%=beanP.getPrecio()%></div>        
-                                         </div>
-                                     </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
-						 <ul class="list">
-						  <li>
-						  	<img src="imagenes/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-                                                            <li><a class="active-icon c1" href="agregarProductoCarrito.jsp?cod=<%=beanP.getId()%>">Al carrito </a>
-								<ul class="sub-icon1 list">
-									<li><h5>Agregar este producto al carrito</h5><a href=""></a></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clear"></div>
-			    	</a></div>
-				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
-				     <div class="view view-fifth">
+		       </section>
+		</div>
+		<div class="cont span_2_of_3">
+		  <div class="mens-toolbar">
+              <div class="sort">
+               	<div class="sort-by">
+		            <label>Ordenar por: </label>
+		            <select>
+		                            <option value="">
+		                    Popularidad               </option>
+		                            <option value="">
+		                    Precio: Mayor a Menor               </option>
+		                            <option value="">
+		                    Precio: Menor a Mayor               </option>
+		            </select>
+		            <a href=""><img src="imagenes/arrow2.gif" alt="" class="v-middle"></a>
+               </div>
+    		</div>
+	          <div class="pager">   
+	           <div class="limiter visible-desktop">
+	            <label>Mostrar</label>
+	            <select>
+	                            <option value="" selected="selected">
+	                    9                </option>
+	                            <option value="">
+	                    15                </option>
+	                            <option value="">
+	                    30                </option>
+	                        </select> por pagina        
+	             </div>
+	       		<ul class="dc_pagination dc_paginationA dc_paginationA06">
+				    <li><a href="#" class="previous">Pages</a></li>
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+			  	</ul>
+		   		<div class="clear"></div>
+	    	</div>
+     	    <div class="clear"></div>
+	       </div>
+			    <div class="box1">
+				   <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
 				  	  <div class="top_box">
-                                              <% beanP = lista.get(1);%>
-                                              <h3 class="m_1"><%=beanP.getNombre()%></h3>
-					  	<p class="m_2">Marca:<%=beanP.getMarca()%> </p>
-					    <div class="grid_img">
-						   <div class="css3"><img src="imagenes/pic1.jpg" alt=""/></div>
-					          <div class="mask">
-	                       		<div class="info">Vista Rapida</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$<%=beanP.getPrecio()%></div>
-					   </div>
-					    </div>
-					   <span class="rating">
-				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-				        <label for="rating-input-1-5" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-				        <label for="rating-input-1-4" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-				        <label for="rating-input-1-3" class="rating-star1"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-				        <label for="rating-input-1-2" class="rating-star"></label>
-				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
-		        	  (45)
-		    	      </span>
-						 <ul class="list">
-						  <li>
-						  	<img src="imagenes/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="agregarProductoCarrito.jsp?cod=<%=beanP.getId()%>">Al carrito </a>
-								<ul class="sub-icon1 list">
-									<li><h5>Agregar este producto al carrito</h5><a href=""></a></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clear"></div>
-			    	</a></div>
-				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
-				     <div class="view view-fifth">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Tenis chidos</h3>
-					  	<p class="m_2">Marca: Patito</p>
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
 				         <div class="grid_img">
-						   <div class="css3"><img src="imagenes/pic2.jpg" alt=""/></div>
-					          <div class="mask">
-	                       		<div class="info">Vista Rapida</div>
+						   <div class="css3"><img src="imagenes/pic11.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">$1000</div>
 					   </div>
 					    </div>
-					   <span class="rating">
+					   <span class="rating1">
 				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
 				        <label for="rating-input-1-5" class="rating-star1"></label>
 				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
@@ -441,13 +372,98 @@
 				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
 		        	  (45)
 		    	      </span>
-						 <ul class="list">
+						 <ul class="list2">
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
 								<ul class="sub-icon1 list">
-									<li><h5>Agregar este producto al carrito</h5><a href=""></a></li>
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="imagenes/pic10.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">$1000</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="imagenes/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				   <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="imagenes/pic9.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">$1000</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="imagenes/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
 								</ul>
 							  </li>
 							 </ul>
@@ -458,21 +474,21 @@
 				  <div class="clear"></div>
 			  </div>
 			  <div class="box1">
-				  <div class="col_1_of_3 span_1_of_3"><a href="single.html">
-				     <div class="view view-fifth">
+				 <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
 				  	  <div class="top_box">
-					  	<h3 class="m_1">Tenis chidos</h3>
-					  	<p class="m_2">Marca: Patito</p>
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
 				         <div class="grid_img">
 						   <div class="css3"><img src="imagenes/pic3.jpg" alt=""/></div>
-					          <div class="mask">
-	                       		<div class="info">Vista Rapida</div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">$1000</div>
 					   </div>
 					    </div>
-					   <span class="rating">
+					   <span class="rating1">
 				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
 				        <label for="rating-input-1-5" class="rating-star1"></label>
 				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
@@ -485,13 +501,14 @@
 				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
 		        	  (45)
 		    	      </span>
-						 <ul class="list">
+						 <ul class="list2">
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
 								<ul class="sub-icon1 list">
-									<li><h5>Agregar este producto al carrito</h5><a href=""></a></li>
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
 								</ul>
 							  </li>
 							 </ul>
@@ -499,21 +516,21 @@
 					     </ul>
 			    	    <div class="clear"></div>
 			    	</a></div>
-				    <div class="col_1_of_3 span_1_of_3"><a href="single.html">
-				     <div class="view view-fifth">
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
 				  	  <div class="top_box">
-					  	<h3 class="m_1">Tenis chidos</h3>
-					  	<p class="m_2">Marca: Patito</p>
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
 				         <div class="grid_img">
 						   <div class="css3"><img src="imagenes/pic4.jpg" alt=""/></div>
-					          <div class="mask">
-	                       		<div class="info">Vista Rapida</div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">$1000</div>
 					   </div>
 					    </div>
-					   <span class="rating">
+					   <span class="rating1">
 				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
 				        <label for="rating-input-1-5" class="rating-star1"></label>
 				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
@@ -526,13 +543,14 @@
 				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
 		        	  (45)
 		    	      </span>
-						 <ul class="list">
+						 <ul class="list2">
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
 								<ul class="sub-icon1 list">
-									<li><h5>Agregar este producto al carrito</h5><a href=""></a></li>
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
 								</ul>
 							  </li>
 							 </ul>
@@ -540,21 +558,21 @@
 					     </ul>
 			    	    <div class="clear"></div>
 			    	</a></div>
-				   <div class="col_1_of_3 span_1_of_3"><a href="single.html">
-				     <div class="view view-fifth">
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
 				  	  <div class="top_box">
-					  	<h3 class="m_1">Tenis chidos</h3>
-					  	<p class="m_2">Marca: Patito</p>
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
 				         <div class="grid_img">
 						   <div class="css3"><img src="imagenes/pic5.jpg" alt=""/></div>
-					          <div class="mask">
-	                       		<div class="info">Vista Rapida</div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">$780</div>
+                       <div class="price">$1000</div>
 					   </div>
 					    </div>
-					   <span class="rating">
+					   <span class="rating1">
 				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
 				        <label for="rating-input-1-5" class="rating-star1"></label>
 				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
@@ -567,13 +585,14 @@
 				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
 		        	  (45)
 		    	      </span>
-						 <ul class="list">
+						 <ul class="list2">
 						  <li>
 						  	<img src="imagenes/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Al carrito </a>
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
 								<ul class="sub-icon1 list">
-									<li><h5>Agregar este producto al carrito</h5><a href=""></a></li>
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
 								</ul>
 							  </li>
 							 </ul>
@@ -582,11 +601,147 @@
 			    	    <div class="clear"></div>
 			    	</a></div>
 				  <div class="clear"></div>
-			    </div>
 			  </div>
-			 </div>
-        </div>
-        <div class="footer">
+			  <div class="box1">
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="imagenes/pic6.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">$1000</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="imagenes/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="imagenes/pic7.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">$1000</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="imagenes/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="single.html">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
+					  	<p class="m_2">Lorem ipsum</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="imagenes/pic8.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">Quick View</div>
+			                  </div>
+	                    </div>
+                       <div class="price">$1000</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+				        <label for="rating-input-1-4" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+				        <label for="rating-input-1-3" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+				        <label for="rating-input-1-2" class="rating-star"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	  (45)
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="imagenes/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">Al Carrito </a>
+								<ul class="sub-icon1 list">
+									<li><h3>sed diam nonummy</h3><a href=""></a></li>
+									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+								</ul>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			    	    <div class="clear"></div>
+			    	</a></div>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			  </div>
+			  <div class="clear"></div>
+			</div>
+		   </div>
+	     <div class="footer">
        	  <div class="footer-top">
        		<div class="wrap">
        			   <div class="col_1_of_footer-top span_1_of_footer-top">
